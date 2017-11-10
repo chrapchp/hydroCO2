@@ -155,11 +155,11 @@ void refreshModbusRegisters()
 {
 
 
-  modbusRegisters[HR_PRESSURE1] = B1N1_CO_PT001.getRawSample();
-  modbusRegisters[HR_PRESSURE2] = B1N1_CO_PT002.getRawSample();
-  modbusRegisters[HR_PRESSURE3] = B1N1_CO_PT003.getRawSample();
-  modbusRegisters[HR_DIFFDP1] = B1N1_CO_PT004.getRawSample();
-  modbusRegisters[HR_HEARTBEAT] = heartBeat;
+  modbusRegisters[B1N1_CO_PT_001_MB] = B1N1_CO_PT001.getRawSample();
+  modbusRegisters[B1N1_CO_PT_002_MB] = B1N1_CO_PT002.getRawSample();
+  modbusRegisters[B1N1_CO_PT_003_MB] = B1N1_CO_PT003.getRawSample();
+  modbusRegisters[B1N1_CO_PT_004_MB] = B1N1_CO_PT004.getRawSample();
+  modbusRegisters[HEART_BEAT] = heartBeat;
 
   modbusRegisters[B1N1_CO_AT_001_MB] = ( 2000 * ( timeOn - .002)/(timeOn+timeOff - .004) ) * 10;
 }
